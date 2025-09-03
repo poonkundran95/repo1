@@ -9,4 +9,6 @@ jobs:
         run: echo "My github actions job"
       - name: List FIles
         run: ls
+      - name: execute hello script
+        run: ./hello.sh
 
