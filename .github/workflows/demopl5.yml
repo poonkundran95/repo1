@@ -38,6 +38,11 @@ jobs:
     concurrency: 
       group: production-deployment
       cancel-in-progress: true
+    steps:
+      - name: dummy step
+        run: |
+          echo "test"
+
 
 
           
