@@ -1,0 +1,16 @@
+name: Env value
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step1
+        env:
+          stepVar1: stepvalue1
+        run: |
+          echo "The value for stepvar1: $stepVar1"
