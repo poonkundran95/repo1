@@ -6,7 +6,7 @@ on:
         description: 'Log Level'
         required: true
         default: 'warning'
-        
+
 env:
   stepVar2: stepvalue2
 
@@ -22,4 +22,22 @@ jobs:
           echo "The value for stepvar2: $stepVar2"
           echo "The value for RepoVar1: ${{ vars.REPOVAR1 }}"
           echo "The value for RepoSecret1: ${{ secrets.REPOSEC1 }}"
+  
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome message
+        run: |
+          echo "testing..."
+          sleep 600s
+    
+  deploy:
+    needs: job2
+    runs-on: ubuntu-latest
+    concurrency: 
+      group: production-deployment
+      cancel-in-progress: true
+
+
           
