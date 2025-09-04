@@ -1,0 +1,15 @@
+name: My second Workflow
+on: push
+
+jobs:
+  first_job:
+    runs-on: linuxvm1g9
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: List and read files
+        run: |
+          echo "Test workflow"
+          ls -ltra
+          cat README.md
+      
