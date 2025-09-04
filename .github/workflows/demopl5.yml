@@ -1,8 +1,12 @@
 name: Env value
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+        
 env:
   stepVar2: stepvalue2
 
