@@ -1,5 +1,6 @@
-name: My second Workflow
-on: push
+name: My third Workflow
+on: 
+  workflow_dispatch:
 
 jobs:
   first_job:
