@@ -30,18 +30,17 @@ jobs:
       - name: welcome message
         run: |
           echo "testing..."
-          sleep 600s
+          #sleep 600s
     
   deploy:
-    needs: job2
+    needs: job1
     runs-on: ubuntu-latest
-    concurrency: 
-      group: production-deployment
-      cancel-in-progress: true
     steps:
       - name: dummy step
+        timeout-minutes: 1
         run: |
           echo "test"
+          sleep 600s
 
 
 
