@@ -1,6 +1,5 @@
 name: My second Workflow
-on: 
-  workflow_dispatch:
+on: push
 
 jobs:
   first_job:
@@ -9,8 +8,7 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
       - name: List and read files
-        run: |
-          echo "Test workflow"
-          ls -ltra
-          cat README.md
+        run:  ls -ltra
+      - name: Run ASCII Art script
+        run: ./ascii-script.sh
       
