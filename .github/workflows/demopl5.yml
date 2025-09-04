@@ -16,3 +16,5 @@ jobs:
         run: |
           echo "The value for stepvar1: $stepVar1"
           echo "The value for stepvar2: $stepVar2"
+          echo "The value for stepvar2: $REPOVAR1"
+          
