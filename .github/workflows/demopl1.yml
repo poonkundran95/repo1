@@ -19,4 +19,4 @@ jobs:
       needs: first_job
       steps:
         - name: welcome message
-          run: echo "My github actions job"
+          run: echo "My github action job"
