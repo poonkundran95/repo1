@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: welcome message
-        run: echo "My github actions job"
+        run: echo "My github action job"
       - name: present working directory
         run: pwd
       - name: change permission
