@@ -1,0 +1,11 @@
+name: docker matrix
+
+on:push
+
+jobs:
+  call-reusable:
+    uses: owner/repo/.github/workflows/demo_reusable.yml@main
+    with:
+      message: "Hello from parent"
+    secrets:
+      MY_SECRET: ${{ secrets.MY_SECRET }}
