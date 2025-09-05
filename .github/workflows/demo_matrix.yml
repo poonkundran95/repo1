@@ -1,7 +1,6 @@
 name: docker matrix
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
