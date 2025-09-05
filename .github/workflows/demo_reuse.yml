@@ -1,4 +1,4 @@
-name: docker matrix
+name: reuse workflow
 
 on:push
 
