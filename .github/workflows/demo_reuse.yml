@@ -4,7 +4,7 @@ on: push
 
 jobs:
   call-reusable:
-    uses: owner/repo/.github/workflows/demo_reusable.yml@main
+    uses: poonkundran95/repo1/.github/workflows/demo_reusable.yml@main
     with:
       message: "Hello from parent"
     secrets:
